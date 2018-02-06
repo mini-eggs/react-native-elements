@@ -7,7 +7,7 @@ import {
   ActivityIndicator,
   Text,
 } from 'react-native';
-import MaterialIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import MaterialIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';

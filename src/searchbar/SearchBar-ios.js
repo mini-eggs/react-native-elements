@@ -10,7 +10,7 @@ import {
   ActivityIndicator,
   Text,
 } from 'react-native';
-import Ionicon from 'react-native-vector-icons/Ionicons';
+import Ionicon from 'react-native-vector-icons/dist/Ionicons';
 
 import ViewPropTypes from '../config/ViewPropTypes';
 import Input from '../input/Input';

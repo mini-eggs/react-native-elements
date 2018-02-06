@@ -144,14 +144,14 @@ export default class Rating extends Component {
     const { imageSize, ratingCount, type } = this.props;
     const source = TYPES[type].source;
 
-    return times(ratingCount, index =>
+    return times(ratingCount, index => (
       <View key={index} style={styles.starContainer}>
         <Image
           source={source}
           style={{ width: imageSize, height: imageSize }}
         />
       </View>
-    );
+    ));
   }
 
   getCurrentRating() {
@@ -212,9 +212,7 @@ export default class Rating extends Component {
           <Text style={[styles.currentRatingText, { color }]}>
             {this.getCurrentRating()}
           </Text>
-          <Text style={styles.maxRatingText}>
-            /{ratingCount}
-          </Text>
+          <Text style={styles.maxRatingText}>/{ratingCount}</Text>
         </View>
         <View>
           {readonly && <Text style={styles.readonlyLabel}>(readonly)</Text>}

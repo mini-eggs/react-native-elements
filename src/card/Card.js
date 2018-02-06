@@ -55,34 +55,36 @@ const Card = props => {
       >
         {title === '' ||
           (title &&
-            title.length > 0 &&
-            <View>
-              <Text
-                style={[
-                  styles.cardTitle,
-                  image && styles.imageCardTitle,
-                  titleStyle && titleStyle,
-                  fontFamily && { fontFamily },
-                ]}
-                numberOfLines={titleNumberOfLines}
-              >
-                {title}
-              </Text>
-              {!image &&
-                <Divider
-                  style={[styles.divider, dividerStyle && dividerStyle]}
-                />}
-            </View>)}
-        {image &&
+            title.length > 0 && (
+              <View>
+                <Text
+                  style={[
+                    styles.cardTitle,
+                    image && styles.imageCardTitle,
+                    titleStyle && titleStyle,
+                    fontFamily && { fontFamily },
+                  ]}
+                  numberOfLines={titleNumberOfLines}
+                >
+                  {title}
+                </Text>
+                {!image && (
+                  <Divider
+                    style={[styles.divider, dividerStyle && dividerStyle]}
+                  />
+                )}
+              </View>
+            ))}
+        {image && (
           <View style={imageWrapperStyle && imageWrapperStyle}>
             <BackgroundImage
               style={[{ width: null, height: 150 }, imageStyle && imageStyle]}
               source={image}
               {...imageProps}
             >
-              {(featuredTitle || featuredSubtitle) &&
+              {(featuredTitle || featuredSubtitle) && (
                 <View style={styles.overlayContainer}>
-                  {featuredTitle &&
+                  {featuredTitle && (
                     <Text
                       style={[
                         styles.featuredTitle,
@@ -90,8 +92,9 @@ const Card = props => {
                       ]}
                     >
                       {featuredTitle}
-                    </Text>}
-                  {featuredSubtitle &&
+                    </Text>
+                  )}
+                  {featuredSubtitle && (
                     <Text
                       style={[
                         styles.featuredSubtitle,
@@ -99,13 +102,16 @@ const Card = props => {
                       ]}
                     >
                       {featuredSubtitle}
-                    </Text>}
-                </View>}
+                    </Text>
+                  )}
+                </View>
+              )}
             </BackgroundImage>
             <View style={[{ padding: 10 }, wrapperStyle && wrapperStyle]}>
               {children}
             </View>
-          </View>}
+          </View>
+        )}
         {!image && children}
       </View>
     </View>

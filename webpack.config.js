@@ -2,41 +2,41 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: './src/index',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, 'build'),
-  },
   module: {
     rules: [
       {
-        test: /\.js$/,
-        use: ['babel-loader'],
-        exclude: /node_modules/,
-      },
-      {
         test: /\.(jpe?g|png|gif)$/i,
-        use: [
-          'file-loader?hash=sha512&digest=hex&name=[hash].[ext]',
-          'image-webpack-loader',
-        ],
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]?[hash]',
+        },
       },
     ],
   },
   externals: {
     react: 'react',
     'react-native': 'react-native',
-    'react-native-vector-icons/MaterialIcons': 'react-native-vector-icons/MaterialIcons',
-    'react-native-vector-icons/FontAwesome': 'react-native-vector-icons/FontAwesome',
-    'react-native-vector-icons/Zocial': 'react-native-vector-icons/Zocial',
-    'react-native-vector-icons/Octicons': 'react-native-vector-icons/Octicons',
-    'react-native-vector-icons/MaterialCommunityIcons': 'react-native-vector-icons/MaterialCommunityIcons',
-    'react-native-vector-icons/Foundation': 'react-native-vector-icons/Foundation',
-    'react-native-vector-icons/SimpleLineIcons': 'react-native-vector-icons/SimpleLineIcons',
-    'react-native-vector-icons/EvilIcons': 'react-native-vector-icons/EvilIcons',
-    'react-native-vector-icons/Entypo': 'react-native-vector-icons/Entypo',
-    'react-native-vector-icons/Ionicons': 'react-native-vector-icons/Ionicons',
-    'react-native-vector-icons/Feather': 'react-native-vector-icons/Feather'
+    'react-native-vector-icons/dist/MaterialIcons':
+      'react-native-vector-icons/dist/MaterialIcons',
+    'react-native-vector-icons/dist/FontAwesome':
+      'react-native-vector-icons/dist/FontAwesome',
+    'react-native-vector-icons/dist/Zocial':
+      'react-native-vector-icons/dist/Zocial',
+    'react-native-vector-icons/dist/Octicons':
+      'react-native-vector-icons/dist/Octicons',
+    'react-native-vector-icons/dist/MaterialCommunityIcons':
+      'react-native-vector-icons/dist/MaterialCommunityIcons',
+    'react-native-vector-icons/dist/Foundation':
+      'react-native-vector-icons/dist/Foundation',
+    'react-native-vector-icons/dist/SimpleLineIcons':
+      'react-native-vector-icons/dist/SimpleLineIcons',
+    'react-native-vector-icons/dist/EvilIcons':
+      'react-native-vector-icons/dist/EvilIcons',
+    'react-native-vector-icons/dist/Entypo':
+      'react-native-vector-icons/dist/Entypo',
+    'react-native-vector-icons/dist/Ionicons':
+      'react-native-vector-icons/dist/Ionicons',
+    'react-native-vector-icons/dist/Feather':
+      'react-native-vector-icons/dist/Feather',
   },
-  plugins: [new webpack.optimize.UglifyJsPlugin()],
 };

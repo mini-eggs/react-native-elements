@@ -1,14 +1,14 @@
-import ZocialIcon from 'react-native-vector-icons/Zocial';
-import OcticonIcon from 'react-native-vector-icons/Octicons';
-import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
-import MaterialCommunityIcon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Ionicon from 'react-native-vector-icons/Ionicons';
-import FoundationIcon from 'react-native-vector-icons/Foundation';
-import EvilIcon from 'react-native-vector-icons/EvilIcons';
-import EntypoIcon from 'react-native-vector-icons/Entypo';
-import FAIcon from 'react-native-vector-icons/FontAwesome';
-import SimpleLineIcon from 'react-native-vector-icons/SimpleLineIcons';
-import FeatherIcon from 'react-native-vector-icons/Feather';
+import ZocialIcon from 'react-native-vector-icons/dist/Zocial';
+import OcticonIcon from 'react-native-vector-icons/dist/Octicons';
+import MaterialIcon from 'react-native-vector-icons/dist/MaterialIcons';
+import MaterialCommunityIcon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
+import Ionicon from 'react-native-vector-icons/dist/Ionicons';
+import FoundationIcon from 'react-native-vector-icons/dist/Foundation';
+import EvilIcon from 'react-native-vector-icons/dist/EvilIcons';
+import EntypoIcon from 'react-native-vector-icons/dist/Entypo';
+import FAIcon from 'react-native-vector-icons/dist/FontAwesome';
+import SimpleLineIcon from 'react-native-vector-icons/dist/SimpleLineIcons';
+import FeatherIcon from 'react-native-vector-icons/dist/Feather';
 
 const customIcons = {};
 
